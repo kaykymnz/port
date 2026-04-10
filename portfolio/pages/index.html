@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Kayky Bezerra</title>
+  <link rel="stylesheet" href="../styles/style.css"> 
+</head>
+<body>
+
+  <!-- HOME -->
+  <div class="container" id="home">
+    <div class="left">
+      <div class="text">
+        <h1>KAYKY BEZERRA</h1>
+        <h2>FULLSTACK SOFTWARE DEVELOPER</h2>
+      </div>
+
+      <div class="techs">
+        <div class="tech">Angular.js</div>
+        <div class="tech">Java</div>
+        <div class="tech">SQL</div>
+        <div class="tech">CI/CD</div>
+        <div class="tech">TDD</div>
+        <div class="tech">IA</div>
+      </div>
+
+      <div class="action-links">
+        <a href="#sobre-secao" class="link-btn">Sobre Mim</a>
+        <a href="#github" class="link-btn">GitHub</a>
+        <a href="#linkedin" class="link-btn">LinkedIn</a>
+        <a href="#contato" class="link-btn">Contato</a>
+      </div>
+
+      <div class="projects-preview">
+        <h3>RECENT PROJECTS</h3>
+        <div class="cards">
+          <div class="card">ShopSwift</div>
+          <div class="card">MicroAPI</div>
+          <div class="card">AI Buddy</div>
+        </div>
+        <a href="#projetos-secao" class="cta-btn">TODOS OS PROJETOS ↗</a>
+      </div>
+    </div>
+
+    <img src="../images/logoPrincipal.png" class="character" alt="Kayky Bezerra">
+  </div>
+
+  <!-- SOBRE -->
+<section id="sobre-secao">
+  <div class="sobre-container">
+
+    <div class="sobre-coluna esquerda">
+      <h2>FORMAÇÃO</h2>
+      <div class="linha"></div>
+      <p>Curso Técnico em Desenvolvimento de Sistemas - ETEC de Itaquera</p>
+      <p>Cursando Superior em Gestão da Tecnologia da Informação - FATEC de Itaquaquecetuba</p>
+    </div>
+
+    <img src="../images/aboutMe.png" class="sobre-personagem" alt="Kayky Sobre">
+
+    <div class="sobre-coluna direita">
+      <h2>EXPERIÊNCIA</h2>
+      <div class="linha"></div>
+      <p>
+        Desenvolvedor FullStack no 
+        <a href="https://iga.itau.com.br/#/home"
+          style="color: #ff6202; text-decoration-color: #ff6202;">
+          ITAÚ Gestão de Ativos
+        </a>
+      </p>
+      <p>09/2025 - Presente</p>
+    </div>
+
+  </div>
+</section>
+
+  <!-- PROJETOS -->
+  <section id="projetos-secao">
+    <div id="projetos-titulo">
+      <h2>PROJETOS</h2>
+    </div>
+
+    <div class="projetos-container">
+      <img src="../images/logoprojetos.png" class="character-joinha" alt="Kayky Bezerra Joinha">
+
+      <div class="projetos-grid">
+
+        <div class="projeto-card">
+          <div class="projeto-browser">
+            <div class="browser-bar">
+              <div class="controls">
+                <span class="red"></span>
+                <span class="yellow"></span>
+                <span class="green"></span>
+              </div>
+              <div class="address">https://...</div>
+            </div>
+            <img src="../images/previewApolo.png">
+          </div>
+          <div class="projeto-info">
+            <h4>Apolo Veículos</h4>
+            <p>Sistema web de gerenciamento de negociações de automóveis</p>
+            <div class="projeto-tags">
+              <span class="tag">PHP</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="projeto-card">
+          <div class="projeto-browser">
+            <div class="browser-bar">
+              <div class="controls">
+                <span class="red"></span>
+                <span class="yellow"></span>
+                <span class="green"></span>
+              </div>
+              <div class="address">https://...</div>
+            </div>
+            <img src="../images/previewFunko.png">
+          </div>
+          <div class="projeto-info">
+            <h4>Funko Log</h4>
+            <p>Sistema web de e-commerce para loja de Funko Pop</p>
+            <div class="projeto-tags">
+              <span class="tag">PHP</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">Bootstrap</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="projeto-card">
+          <div class="projeto-browser">
+            <div class="browser-bar">
+              <div class="controls">
+                <span class="red"></span>
+                <span class="yellow"></span>
+                <span class="green"></span>
+              </div>
+              <div class="address">https://...</div>
+            </div>
+            <img src="../images/previewPatrono.png">
+          </div>
+          <div class="projeto-info">
+            <h4>Patrono Neves</h4>
+            <p>Plataforma web de cursos online</p>
+            <div class="projeto-tags">
+              <span class="tag">PHP</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="github"></section>
+  <section id="linkedin"></section>
+  <section id="contato"></section>
+
+</body>
+<script>
+const sobre = document.querySelector("#sobre-secao");
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      sobre.classList.add("animar");
+    }
+  });
+}, { threshold: 0.4 });
+
+observer.observe(sobre);
+</script>
+</html>

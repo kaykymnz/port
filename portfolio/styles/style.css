@@ -1,0 +1,360 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: #e5e5e5;
+}
+
+body {
+  height: auto;
+  min-height: 100vh;
+  display: block;
+  overflow-x: hidden;
+  background: #e5e5e5;
+}
+
+/* CONTAINER PRINCIPAL */
+.container {
+  width: 100vw;
+  height: 65vh;
+  margin-top: 7vw; /* Centraliza horizontalmente */
+  position: relative;
+  border-radius: 10px;
+  overflow: visible;
+  display: flex;
+  justify-content: center;
+}
+
+.left {
+  width: 90%;
+  background: #d71920;
+  border-radius: 10px;
+  padding: 2% 4%;
+  position: relative;
+  transform: translateX(-100%);
+  opacity: 0;
+  animation: bgAnim 1s ease forwards;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+.text {
+  color: white;
+  transform: translateY(-50px);
+  opacity: 0;
+  animation: textAnim 1s ease forwards;
+  animation-delay: 0.5s;
+}
+
+.text h1 { font-size: 5vw; letter-spacing: 0.2vw; }
+.text h2 { font-size: 2vw; color: black; }
+
+.techs {
+  display: flex;
+  gap: 1vw;
+  transform: translateY(50px);
+  opacity: 0;
+  animation: techAnim 1s ease forwards;
+  animation-delay: 0.7s;
+}
+
+.tech {
+  background: white;
+  color: #d71920;
+  padding: 0.5vw 1vw;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1vw;
+}
+
+.action-links {
+  display: flex;
+  gap: 1vw;
+  transform: translateY(50px);
+  opacity: 0;
+  animation: techAnim 1s ease forwards;
+  animation-delay: 0.9s;
+}
+
+.link-btn {
+  background: white;
+  color: black;
+  text-decoration: none;
+  padding: 0.8vw 1.5vw;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1vw;
+  transition: 0.3s;
+}
+
+.link-btn:hover { background: #f0f0f0; transform: scale(1.05); }
+
+.projects-preview {
+  background: #a91319;
+  padding: 1vw;
+  border-radius: 5px;
+  width: 60%;
+  color: white;
+  transform: translateY(50px);
+  opacity: 0;
+  animation: techAnim 1s ease forwards;
+  animation-delay: 1.1s;
+}
+
+.projects-preview h3 { font-size: 1.2vw; text-align: center; margin-bottom: 1vh; }
+.cards { display: flex; gap: 1vw; margin-bottom: 1vh; }
+
+.card {
+  flex: 1;
+  background: white;
+  color: black;
+  text-align: center;
+  padding: 1vw;
+  border-radius: 5px;
+  font-size: 0.9vw;
+  font-weight: bold;
+  /* width: 82%; */
+}
+
+.cta-btn {
+  display: block;
+  text-align: center;
+  background: white;
+  color: black;
+  text-decoration: none;
+  padding: 0.8vw;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.cta-btn:hover { background: #eee; }
+
+.character {
+  position: absolute;
+  right: 1%;
+  bottom: 0;
+  height: 110%;
+  transform: translateX(100%);
+  opacity: 0;
+  animation: charAnim 1s ease forwards;
+  animation-delay: 0.8s;
+  pointer-events: none;
+}
+
+/* SEÇÃO DE PROJETOS */
+#projetos-secao {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8vh 0;
+  gap: 4vh;
+}
+
+#projetos-titulo h2 {
+  font-size: 3vw;
+  letter-spacing: 0.2vw;
+  color: black;
+  font-weight: bold;
+}
+
+.projetos-container {
+  width: 90vw;
+  background: white;
+  border-radius: 10px;
+  padding: 3vw;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.character-joinha {
+  position: absolute;
+  top: -7.4vw; /* Ajuste para o braço vazar */
+  /* right: 2%; */
+  width: 15vw;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.projetos-grid {
+  display: flex;
+  gap: 2vw;
+}
+
+.projeto-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.projeto-browser {
+  height: 25vh;
+  border: 1px solid #ccc;
+  border-radius: 5px 5px 0 0;
+  background: #eee;
+  position: relative;
+  overflow: hidden;
+}
+
+.browser-bar {
+  height: 3vh;
+  background: #f0f0f0;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  padding: 0 0.5vw;
+  gap: 1vw;
+}
+
+.controls {
+  display: flex;
+  gap: 0.3vw;
+}
+
+.controls span {
+  width: 0.6vw;
+  height: 0.6vw;
+  border-radius: 50%;
+}
+
+.red { background: #ff5f57; }
+.yellow { background: #ffbd2e; }
+.green { background: #28ca41; }
+
+.projeto-browser img {
+  width: 100%;
+  height: calc(100% - 3vh);
+  object-fit: cover;
+  display: block;
+}
+
+.projeto-info {
+  padding: 1vw 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vh;
+}
+
+.projeto-info h4 { font-size: 1.2vw; font-weight: bold; }
+.projeto-info p { font-size: 0.9vw; color: #666; }
+
+.projeto-tags {
+  display: flex;
+  gap: 0.5vw;
+  margin-top: 1vh;
+}
+
+.tag {
+  background: #a91319;
+  color: white;
+  padding: 0.3vw 0.8vw;
+  border-radius: 5px;
+  font-size: 0.8vw;
+  font-weight: bold;
+}
+
+
+/* SEÇÃO SOBRE */
+/* =========================
+   SEÇÃO SOBRE (COM ANIMAÇÃO)
+   ========================= */
+
+#sobre-secao {
+  width: 100%;
+  padding: 12vh 0;
+  display: flex;
+  justify-content: center;
+}
+
+.sobre-container {
+  width: 90vw;
+  height: 60vh;
+  background: #efefef;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* PERSONAGEM NO CENTRO */
+.sobre-personagem {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 26vw;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* COLUNAS DE TEXTO */
+.sobre-coluna {
+  position: absolute;
+  top: 50%;
+  width: 28%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 1.2s ease;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+/* ambas começam no centro */
+.esquerda {
+  left: 50%;
+}
+
+.direita {
+  left: 50%;
+}
+
+/* títulos e textos */
+.sobre-coluna h2 {
+  font-size: 2.5vw;
+  letter-spacing: 0.2vw;
+}
+
+.sobre-coluna p {
+  font-size: 1vw;
+  color: #333;
+}
+
+.linha {
+  width: 100%;
+  height: 3px;
+  background: black;
+  margin: 1vh 0 2vh 0;
+}
+
+/* =========================
+   ESTADO FINAL DA ANIMAÇÃO
+   ========================= */
+
+#sobre-secao.animar .esquerda {
+  left: 5%;
+  transform: translateY(-50%);
+  opacity: 1;
+}
+
+#sobre-secao.animar .direita {
+  left: 95%;
+  transform: translate(-100%, -50%);
+  opacity: 1;
+}
+
+/* ANIMAÇÕES */
+@keyframes bgAnim { to { transform: translateX(0); opacity: 1; } }
+@keyframes textAnim { to { transform: translateY(0); opacity: 1; } }
+@keyframes charAnim { to { transform: translateX(0); opacity: 1; } }
+@keyframes techAnim { to { transform: translateY(0); opacity: 1; } }
